@@ -4,9 +4,9 @@ USE CoderHouse
 /* Consignas Clase 8 */
 
 /* 1.- Indicar por jornada la cantidad de docentes que dictan y sumar los costos. 
-Esta informaciÛn sÛlo se desea visualizar para las asignaturas de desarrollo web. 
+Esta informaci√≥n s√≥lo se desea visualizar para las asignaturas de desarrollo web. 
 El resultado debe contener todos los valores registrados en la primera tabla, 
-Renombrar la columna del c·lculo de la cantidad de docentes como cant_docentes 
+Renombrar la columna del c√°lculo de la cantidad de docentes como cant_docentes 
 y la columna de la suma de los costos como suma_total. 
 Keywords: Asignaturas,Staff, DocentesID, Jornada, Nombre, costo. */
 
@@ -29,7 +29,7 @@ GROUP BY T2.Jornada;					-- ORGANIZAMOS LA INFO
 y cuantos son los docentes que tiene asignados cada encargado.
 Luego filtrar los encargados que tienen como resultado 0 ya que 
 son los encargados que NO tienen asignado un docente. 
-Renombrar el campo de la operaciÛn como Cant_Docentes. 
+Renombrar el campo de la operaci√≥n como Cant_Docentes. 
 Keywords: Docentes_id, Encargado, Staff, Nombre, Apellido,Encargado_ID. */
 
 -- PARA VER LAS TABLAS
@@ -78,7 +78,7 @@ SELECT * FROM Asignaturas
 SELECT T2.*			 					-- TODOS LOS DATOS DE ASIGNATURA
 FROM Staff T1							-- PARTIMOS DE LA TABLA Staff
 RIGHT JOIN Asignaturas T2				-- SEGUNDEAMOS TABLA DE Asignaturas, COMO NOS PIDE PARTIR DE LA TABLA DOCENTES ES RIGHT (SEGUNDA OPCION)
-ON T1.Asignatura = T2.AsignaturasID		-- NUESTRO VALOR A TOMAR ENTRE TABLAS ES SI EL VALOR Asignatura EST¡ TOMADO POR UN STAFF
+ON T1.Asignatura = T2.AsignaturasID		-- NUESTRO VALOR A TOMAR ENTRE TABLAS ES SI EL VALOR Asignatura EST√Å TOMADO POR UN STAFF
 WHERE T1.Asignatura IS NULL				-- ELIMINAMOS LOS REGRISTROS QUE ESTEN EN AMBAS TABLAS (QUEREMOS LAS ASIGNATURAS QUE NO TIENEN RELACION CON STAFF)
 
 /* ESTE ES EL RESULTADO DEL PROFE, AMBAS FUNCIONAN IGUAL
@@ -95,13 +95,13 @@ SELECT *
 FROM Staff
 WHERE Asignatura = 34
 
-/* 4.- Se quiere conocer la siguiente informaciÛn de los docentes. 
+/* 4.- Se quiere conocer la siguiente informaci√≥n de los docentes. 
 El nombre completo concatenar el nombre y el apellido. 
-Renombrar NombresCompletos, el documento, hacer un c·lculo para conocer los meses de ingreso. 
+Renombrar NombresCompletos, el documento, hacer un c√°lculo para conocer los meses de ingreso. 
 Renombrar meses_ingreso, el nombre del encargado. 
-Renombrar NombreEncargado, el telÈfono del encargado. 
-Renombrar TelefonoEncargado, el nombre del curso o carrera, la jornada y el nombre del ·rea. 
-Solo se desean visualizar solo los que llevan m·s de 3 meses.
+Renombrar NombreEncargado, el tel√©fono del encargado. 
+Renombrar TelefonoEncargado, el nombre del curso o carrera, la jornada y el nombre del √°rea. 
+Solo se desean visualizar solo los que llevan m√°s de 3 meses.
 Ordenar los meses de ingreso de mayor a menor.  
 Keywords: Encargo,Area,Staff,jornada, fecha ingreso. */
 
